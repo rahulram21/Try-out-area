@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ApiService } from './api.service';
+import { Observable } from 'rxjs';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'my-app';
+  userObservable$: Observable<any[]> = new Observable<any[]>
+
+  constructor(private service:ApiService){}
+
+  getUsers(){
+    this.userObservable$ = this.service.getUser();
+  }
 }
