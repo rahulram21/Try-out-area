@@ -1,0 +1,6 @@
+Sorting Algorithms
+*************************
+
+Selection sort - Selection sort works by repeatadly swapping current element with the next lowest remaining values in the array. We have to use nested for loop. First loop iterates over each element and second loop iterates over i+1 values in array.
+
+Bubble sort - 
