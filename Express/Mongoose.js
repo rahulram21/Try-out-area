@@ -15,6 +15,8 @@ const Message = mongoose.model('message', mongoose.Schema({
     }
 }));
 
-async function MongoSave({uername, message}){
-    const newMessage = new Message({username, message});
-}
+WebSocket.OPEN('join_room', data => {
+    WebSocket.to(room).emit('chatroom_users', {
+        allusers
+    })
+})
