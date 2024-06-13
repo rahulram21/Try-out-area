@@ -1,4 +1,10 @@
 <h1>App works</h1>
+<div>
+  <h2 [ngClass]="'colorClass'">Test ngClass directive</h2>
+</div>
+<button (click)="changeColor()">Click on this to change the color of the below text</button>
+<h2 [ngStyle]="currentColorStyle">Test ngStyle directive</h2>
+<h2 *ngIf="setColor2">This text has to appear when the ngIf flag is set</h2>
 <ul>
   <li *ngFor = "let user of userObservable$ | async">
     <h1>{{user.id}}</h1>
