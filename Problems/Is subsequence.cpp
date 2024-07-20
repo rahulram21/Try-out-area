@@ -17,5 +17,5 @@ int main(){
         cout<<"Match"<<endl;
     }else{
         cout<<"Not match";
-    }
+    };
 }
