@@ -13,22 +13,17 @@ class Person{
             name = n;
             cout<<"The name is "<<name;
         }
-    friend class Dogs;
+    friend void displayPersonName(Person p);
 };
 
-class Dogs{
-public:
-    
-    void display(Person t){
-        cout<<"Animal name "<<t.name;
-    }
-};
+void displayPersonName(Person p){
+    cout<<"Person name : "<<p.name;
+}
 
 
 int main(){
     Person p;
     p.setName("Alice");
-    Dogs dog;
-    dog.display(p);
+    displayPersonName(p);
 }
 
