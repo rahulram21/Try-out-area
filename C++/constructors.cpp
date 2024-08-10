@@ -9,6 +9,7 @@ public:
     Person(string a, int b){
         name = a;
         age = b;
+        // How to initilize the variables if the parameters have same name as variables? Using 'this'?
     }
 };
 
