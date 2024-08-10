@@ -14,8 +14,28 @@ public:
     }
 };
 
+//copy constructor
+class Animal{
+public:
+    bool isMammal;
+    string species;
+    Animal(string name){
+        species = name;
+    }
+    //copy constructor
+    Animal(Animal &obj){
+        species = obj.species;
+    }
+    
+};
+
 int main(){
     Person obj("Rahul", 26);
     cout<<"Name of person "<<obj.name<<endl;
     cout<<"Age of person "<<obj.age<<endl;
+
+    //copy constructor invoking
+    Animal anim1("Tiger");
+    Animal anim2(anim1);
+    cout<<"Anim2 name "<<anim2.species<<endl;
 }
