@@ -18,10 +18,9 @@ class Person{
 
 class Dogs{
 public:
-    string dogname;
+    
     void display(Person t){
-        dogname = t.name;
-        cout<<"The animal name "<<dogname;
+        cout<<"Animal name "<<t.name;
     }
 };
 
