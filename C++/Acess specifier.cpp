@@ -6,25 +6,30 @@ class Person{
         string name;
         int age;
     public:
+    void setName(string n){
+        name = n;
+    }
         void printName(string n){
             name = n;
             cout<<"The name is "<<name;
         }
+    friend class Dogs;
 };
 
-class Asian:public Person{
-    public:
-        
-        void printName(string name1){
-            name = name1;
-            cout<<"Name from child class is "<<name;
-        }
+class Dogs{
+public:
+    string dogname;
+    void display(Person t){
+        dogname = t.name;
+        cout<<"The animal name "<<dogname;
+    }
 };
 
 
 int main(){
-
-    Asian obj1;
-    obj1.printName("Harry");
+    Person p;
+    p.setName("Alice");
+    Dogs dog;
+    dog.display(p);
 }
 
