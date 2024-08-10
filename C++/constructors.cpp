@@ -6,10 +6,11 @@ class Person{
 public:
     string name;
     int age;
-    Person(string a, int b){
-        name = a;
-        age = b;
+    Person(string name, int age){
+        this->name = name;
+        this->age = age;
         // How to initilize the variables if the parameters have same name as variables? Using 'this'?
+        // answer : Yes using this as shown above
     }
 };
 
