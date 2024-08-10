@@ -4,13 +4,16 @@ using namespace std;
 
 class Person{
 public:
-    int sum;
-    Person(int a, int b){
-        sum = a+b;
+    string name;
+    int age;
+    Person(string a, int b){
+        name = a;
+        age = b;
     }
 };
 
 int main(){
-    Person obj(1,3);
-    cout<<"The sum "<<obj.sum;
+    Person obj("Rahul", 26);
+    cout<<"Name of person "<<obj.name<<endl;
+    cout<<"Age of person "<<obj.age<<endl;
 }
