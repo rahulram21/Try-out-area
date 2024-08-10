@@ -22,6 +22,7 @@ class Student{
 void Student::calculateAge(){
     cout<<"Hello "<<name;
 }
+// We can define public and private methods using scope operator
 
 int main(){
     Student stu1;
