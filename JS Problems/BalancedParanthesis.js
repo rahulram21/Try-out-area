@@ -12,9 +12,9 @@ function checkBalance(str){
         }
     }
     if(left === right){
-        return 'balanced'
+        return 'balanced';
     }
-    return 'Not balanced'
+    return 'Not balanced';
 }
 
 console.log(checkBalance(str))
