@@ -26,6 +26,11 @@ public:
     Animal(Animal &obj){
         species = obj.species;
     }
+    void printAnimalName(Animal &obj){
+        if(obj.isMammal == true){
+            cout<<"This "<<obj.species<<" is a mammal"<<endl;
+        }
+    }
     //Destructor
     ~Animal(){
         cout<<"Object destructed"<<endl;
@@ -41,5 +46,9 @@ int main(){
     //copy constructor invoking
     Animal anim1("Tiger");
     Animal anim2(anim1);
+    anim2.species = "Lion";
+    anim2.isMammal = true;
+    anim1.isMammal = true;
+    anim2.printAnimalName(anim1);
     cout<<"Anim2 name "<<anim2.species<<endl;
 }
