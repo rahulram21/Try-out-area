@@ -26,6 +26,10 @@ public:
     Animal(Animal &obj){
         species = obj.species;
     }
+    //Destructor
+    ~Animal(){
+        cout<<"Object destructed"<<endl;
+    }
     
 };
 
