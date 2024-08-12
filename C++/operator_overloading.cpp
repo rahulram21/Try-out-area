@@ -2,7 +2,7 @@
 using namespace std;
 
 class Complex{
-    private:
+private:
     int real;
     int img;
     public:
@@ -10,7 +10,6 @@ class Complex{
         real = r;
         img = i;
     }
-
     Complex operator+(Complex obj){
         Complex res;
         res.real = real + obj.real;
@@ -22,9 +21,28 @@ class Complex{
     }
 };
 
+// overloading << operator
+struct YoutubeChannel{
+    string name;
+    int subscribers;
+    YoutubeChannel(string n, int s){
+        name = n;
+        subscribers = s;
+    }
+};
+
+void operator<<(ostream& cout, YoutubeChannel& yt){
+    cout<<"Channel : "<<yt.name<<" & "<<yt.subscribers<<endl;
+}
+
+
 int main(){
     Complex c1(2,3);
     Complex c2(5,6);
     Complex c3 = c1+c2;
     c3.print(c3);
+
+    //struct
+    YoutubeChannel yt1("pewdiepie", 1000);
+    cout<<yt1;
 }
