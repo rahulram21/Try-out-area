@@ -11,4 +11,10 @@ int main(){
     int *q = &x;
     int y = *q;
     cout<<y; // 22
+
+    // dynamic memory allocation
+    // dynamic char array
+    int size = 5;
+    char *ptr = new char[size];
+    delete[] ptr;
 }
