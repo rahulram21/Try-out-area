@@ -5,16 +5,16 @@ class Complex{
 private:
     int real;
     int img;
-    public:
+public:
     Complex(int r=0, int i=0){
         real = r;
         img = i;
     }
-    Complex operator+(Complex obj){
-        Complex res;
-        res.real = real + obj.real;
-        res.img = img+ obj.img;
-        return res;
+    Complex operator+(Complex& obj){
+        Complex result;
+        result.real = real + obj.real;
+        result.img = img + obj.img;
+        return result;
     }
     void print(Complex obj){
         cout<<obj.real<<" + i"<<obj.img<<endl;
@@ -45,4 +45,5 @@ int main(){
     //struct
     YoutubeChannel yt1("pewdiepie", 1000);
     cout<<yt1;
+    
 }
